@@ -1,0 +1,4 @@
+.connect{justify-items:center;text-align:center}.cbox{position:relative;z-index:2;display:grid;gap:14px;justify-items:center;padding:110px 24px 70px;max-width:620px}
+.cbox .actions{justify-content:center}.cbox h1{color:var(--ivory)}.cbox p:not(.role){color:var(--champ)}
+.connect.embedded{min-height:0;margin:0 clamp(20px,6vw,96px) 40px;border:1px solid var(--gold);border-radius:20px}
+.connect.embedded .cbox{padding:56px 24px}

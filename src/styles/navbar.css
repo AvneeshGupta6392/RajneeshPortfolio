@@ -1,0 +1,14 @@
+.nav{position:fixed;inset:0 0 auto;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:12px max(clamp(16px,4vw,48px),env(safe-area-inset-right)) 12px max(clamp(16px,4vw,48px),env(safe-area-inset-left));padding-top:calc(12px + env(safe-area-inset-top));background:rgba(6,45,36,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,179,106,.35);color:var(--ivory)}
+.brand{display:flex;align-items:center;gap:12px;font:500 1.05rem var(--serif);color:var(--champ)}
+.nav nav{display:flex;gap:20px;font-size:.92rem}.nav nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav nav a:hover{color:var(--gold)}.nav nav a.active{color:var(--gold);border-color:var(--gold)}
+.burger{display:none;background:none;border:0;color:var(--champ);min-width:44px;min-height:44px;cursor:pointer}
+@media(max-width:1080px){.burger{display:block}
+.nav nav{max-height:calc(100svh - var(--nav-h));overflow-y:auto;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--deep);padding:8px 24px 20px;display:none}
+.nav nav.open{display:flex}.nav nav a{padding:14px 0;border-bottom:1px solid rgba(212,179,106,.2)}}
+
+.brand{min-width:0}.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:380px){.brand span{font-size:.92rem}.brand{gap:8px}}
+
+/* Tablet/phone nav: menu sits full width under the bar and never overflows */
+@media(max-width:1080px){.nav nav{width:100%;box-shadow:0 18px 30px rgba(0,0,0,.3)}.burger{margin-right:-8px}}

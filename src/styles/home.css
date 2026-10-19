@@ -1,0 +1,22 @@
+.hero,.connect{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 70% 45%,var(--forest),var(--deep) 70%);color:var(--ivory)}
+.stage{position:absolute;inset:0}.gl-fallback{position:absolute;inset:0;background:radial-gradient(circle at 70% 45%,var(--botanic),transparent 45%)}
+.hero-copy{position:relative;z-index:2;padding:calc(var(--nav-h) + clamp(16px,4vh,44px)) clamp(20px,6vw,96px) 64px;max-width:760px;margin-left:max(0px,calc((100% - 1300px)/2));pointer-events:none}
+.hero-copy .actions{pointer-events:auto}.role{color:var(--gold);letter-spacing:.08em}
+.hero h1{margin:14px 0 20px;font-weight:700}.hero .lede,.hero-copy .lede{font-size:1.15rem;color:var(--champ)}
+.hero-copy p:not(.role){font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--champ)}
+.hero-portrait{position:absolute;right:clamp(20px,6vw,96px);bottom:48px;z-index:2;width:150px}
+@media(max-width:900px){.hero-portrait{display:none}.hero-copy{padding-bottom:48px}.stage{opacity:.6}}
+.home-section{scroll-margin-top:70px}.home-section+.home-section{border-top:1px solid rgba(212,179,106,.45)}
+.home-section .page{padding-top:clamp(70px,9vw,110px);padding-bottom:40px}
+.more{max-width:1300px;margin:0 auto 70px;padding:0 clamp(20px,6vw,96px)}
+.more a{color:var(--forest);font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:2px}.more a:hover{color:var(--botanic)}
+
+/* Hero starts right under the navbar instead of floating in the middle of a tall screen */
+.hero{align-items:start;min-height:min(100vh,860px);min-height:min(100svh,860px)}
+.hero-portrait{right:calc(max(0px,(100% - 1300px)/2) + clamp(20px,6vw,96px))}
+@media(max-width:520px){.hero .actions .btn{flex:1 1 calc(50% - 6px);padding:12px 14px;font-size:.95rem}.hero-copy p:not(.role){font-size:1.02rem}}
+
+/* Hero / sections on small screens */
+@media(max-width:900px){.hero{min-height:auto}.hero-copy{max-width:100%;margin-left:0}}
+@media(max-width:520px){.hero-copy{padding-left:20px;padding-right:20px}.hero h1{margin:10px 0 14px}.hero .lede,.hero-copy .lede{font-size:1.02rem}}
+.home-section{overflow-x:clip}
